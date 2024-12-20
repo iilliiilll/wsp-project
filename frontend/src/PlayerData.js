@@ -1,0 +1,29 @@
+const players = [
+  { name: '마커스 래시포드', position: 'forward', number: 10, image: 'https://i.namu.wiki/i/sXHOGLltITpj2wP3IT7lld6m89vWaGWPIEV5Jq-fRKNS7jqXJUE2tT6zsQSB7FVXGyR8WcWP9N0Cj70W4H48D9pY0KGmJEDRNP-fGdcyUTmuGAamFgTPnWukisXOAuKfNUqGQ4AmDyZtxnnqkxs0Ew.webp' },
+  { name: '알레한드로 가르나초', position: 'forward', number: 17, image: 'https://i.namu.wiki/i/Yn9bpxaAVe8uNVQj_84s901hc_F2D-ewEIgPlFD4ywtpCs-V22ICHgdPu-m43hskWWy3MBczwr730eludtC-EGilKJnZNfhyNBu34kyH3Xgy4zr9RY7m3uCYlubmNN0ze-FvCBxUX0YgZ_9VB7vysA.webp' },
+  { name: '브루노 페르난데스', position: 'midfielder', number: 8, image: 'https://i.namu.wiki/i/5JoAyCc5Hk6sFjYy_uEd7A3JjgkztX9fPsigQMcHM8tzpsAvzuTK2rMPCYrveK0C-4hRmwz-NLIo3_h12UA9Defnlbrb7jWxwcKRWu4yodX4m_DTTxvHvinncg0u_wryB-l2oX8Wf_ha_Su3Ufel0g.webp' },
+  { name: '크리스티안 에릭센', position: 'midfielder', number: 14, image: 'https://i.namu.wiki/i/EyjSDO_swyZ6XaUSGQmMx0WwZtobOkHCe8rOO7e8vToZF9e280fVGmPNTBA5WvNVKHA6Tgs6n6eVjyorvFea6koirFxOpnFfNaoyt0alDhvVeUQ0ICUaALtYlzaDb-iOcZmNBTc7O2mtXfuTvJ3VXA.webp' },
+  { name: '리산드로 마르티네즈', position: 'defender', number: 6, image: 'https://i.namu.wiki/i/Ci0_alvZnIRE3II6e3bazHwbjw1RrIAy2zWCMLkuuGLdjnsHhNxFHUtFIbRbcss6_wec05Zqc3BtxWQLOpBLEMjNv6WlS-lIH7BGG_A8sRq0cuGvyOE2LQ7Puf7I9-AWj3StpoXUPiiqV9Gvl-yEtg.webp' },
+  { name: '디오구 달로', position: 'defender', number: 20, image: 'https://i.namu.wiki/i/2WXkclKiY4JflbZXceNeYZ9OYtCjctcL3bUzd7L8T_gQRKB9-DABtdMOHB_fbzXjXqXD_0aY1HCIQ0dp8xjlcih_30hbPNRrmDVzRX18liXPhdxeWE_Ec9g6tbE7plh2brAedtFTKc0UAmlzilMjDw.webp' },
+  { name: '안드레 오나나', position: 'goalkeeper', number: 24, image: 'https://i.namu.wiki/i/nZ0upbhauKizXpJhsAEJcu3sw1drUUq8MV2VFWftDjEQvYkS5dFw7jAXe9A0_1x09cI8fxIHxsDz59glWhYD-3hvKcYgDn9zVW-CPqWripJVgEFTNXOGpTiXwyTD5RbO36iE4vPkaEIxj4uo4WFaOg.webp' },
+  { name: '해리 매과이어', position: 'defender', number: 5, image: 'https://i.namu.wiki/i/b57gs3QLFVm2pCtLJync8tjwrVkxTTKpbFpOPxWBHFVtDe-KtZ3nowTbCLodBf3msFT0uonaYBoJYiGO8QumelybyMZdPJA7pYRoaNWsCubthv6zECDj9aD7oqOuM1xT0RvPx0DF3tcDtV4ATODeyQ.webp' },
+  { name: '루크 쇼', position: 'defender', number: 23, image: 'https://i.namu.wiki/i/016CpIGHD28LQAVJteKKIK9z8ktp-I1deIfJYofep-m2_guiciLW4hiPzIT3f-yNPH0g9JMmiIKH5ebTBfr0S4EDeb1nVz8yFfFGQDWcB2YVIsfgoiHDIbtST_3SYcCMPOdhSZmKIPakHY_OVCNjkw.webp' },
+  { name: '메이슨 마운트', position: 'midfielder', number: 7, image: 'https://i.namu.wiki/i/KNaR5loquvhLYnsXgzfSQ1_fMVnOWk-NQaTas1H-LUj0DQBZsWNwr1Du-n-Tmj-UxqS4v7okncxlpWka4Uw6dJUAdNtwW032kYw6AXViCqskz4JtzkJEBjPPFhcUq4-AOSNBv24S5svY2mZnDwpOvQ.webp' },
+  { name: '라스무스 호일룬', position: 'forward', number: 9, image: 'https://i.namu.wiki/i/wAHGL9IhnWn-9POP09NIR0g0PNHDekd8OkrFQGONMU4tDjo6Ow_9Y24fu-KS0laVCRy9TJ7UVj3krl7uiybZlgFC8XdX0s31bIQXPx8jw8v5ElXVF3UZyV-cgG_kJcIgg0dm_tj5_3y3csEKLAQXVw.webp' },
+  { name: '조슈아 지르크지', position: 'forward', number: 11, image: 'https://i.namu.wiki/i/iwPz1mYqlXfY8fm6O3Qt5O1c-imsdcr1-bMVkfDbjL7v7KgPkNOZjkXn2nwQOOP0bqCQPAlFr6PwRtD2UKZhCj-Wb-N9NBiZvWcvI1HARCV9CLRI0-m9RGdwOhnZG5wXvYmlB6rIWqZ3SiMNfHIqAw.webp' },
+  { name: '코비 마이누', position: 'midfielder', number: 37, image: 'https://i.namu.wiki/i/FXQTJWWze6bLQdblCVDgrcKTwsU3O2vMwvKAgYCmLDd2QXCP8TU-N8FAmydMcR333NLUf6zeUeUFO87QwAldzdNtdb__iz2gvOc0S9nWC9Pj-6Su1IadclBsHCO5kF2rMD3XWaMLocZ-GQstUIrZ3g.webp' },
+  { name: '아마드 디알로', position: 'forward', number: 16, image: 'https://i.namu.wiki/i/SynPaaJdbcwSm4aecrwqxWXBvX_ZheI2n0Rh7-mR6PlSJEI3F9qPlDHtr7cmlNkrGOZU7-IHCSX-yK68RCe-ASrpxLIdDFzwk_SH2KFyTvvIg6AwyK1weK0sw8QngPUpfE1yRhEGlOm5FHxtRpOYRg.webp' },
+  { name: '알타이 바이은드르', position: 'goalkeeper', number: 1, image: 'https://i.namu.wiki/i/PX-Ug-LBj5uPQkTyFE7Ses_FGOTxEccIvr9fEL_MdsVKPct3EQp79zHMXKhekyslKaYEegH8zjH2GwWWqM6ihMe0bqPtNC3WheSzSpIYeFnh9zA_cu9F9znFbTvFEtbg1MN-p9vQR6g7Jnt2Ujx0Og.webp' },
+  { name: '빅토르 린델뢰프', position: 'defender', number: 2, image: 'https://i.namu.wiki/i/kFd6jjfDC3JIP5obhBtQs2lvc_eSwaNT7HQWVinm6OuRoJhbSoHy5yha8FJBaYbYEux-45lqzW5f7_fXj90A6-MILZOld9aasyKBf5TQrBQAuN2dzFIDtgFs6vklZwlcnwoqdTXwf04hGVco-kxgtA.webp' },
+  { name: '누사이르 마즈라위', position: 'defender', number: 3, image: 'https://i.namu.wiki/i/lag6bBRoBuQBf7VidAxDN5umnMDZQ_q4aitLzDovWoZF14nclB0dqkBR4k3NBpMQ0Un3UK-85yR-2CGw_IBu7tvZ213GjHZZddbIDJMyrIn3vuly-dVpfGjtefeF5Utf3pGx9MlkPeUkJLFBD-v2vg.webp' },
+  { name: '마테이스 더리흐트', position: 'defender', number: 4, image: 'https://i.namu.wiki/i/-O1n8IlTCPxa8-iw5-zEGunYAls3hZmwTqYE8g9sR9cU1r5mbX6BTQIDXHTHx0BVQ7CjFRwi--MG4UEVWRSEygn8WqmafS4eO5OKF8W2ulbfWxwLvrly9470O5XftWUyyDeqB08EyA0sxn0uyUWFMw.webp' },
+  { name: '타이럴 말라시아', position: 'defender', number: 12, image: 'https://i.namu.wiki/i/o6i274ZQFUBSn_wSAuB2qkHyRp-Rg89FADIjGFGqKNnEfw7g4fUR88ewzxrH5aCvJulW9vaeCKS9z_SyGor-A49klzJTmppxxsQ0Sp4CJVRvhjxWdcMMDhjD_9RardRLzjYw60GWd_VIrX-Gw03r1Q.webp' },
+  { name: '레니 요로', position: 'defender', number: 15, image: 'https://i.namu.wiki/i/JKsU0-CLeJKCN_b6hrplQrrlBs8glonspTj2xN23raSTgltTOwAh87SW4El52hfb9tihNkNOjX9vssYcAtFLGhS0vEkWXZ_EfAao8ZDXBKqW8aJHZJ5Ll13QBC4ZhVKMJQSTpTYKlYRxSgfDq0OAMg.webp' },
+  { name: '카제미루', position: 'midfielder', number: 18, image: 'https://i.namu.wiki/i/vAd6mPYpDf0-hVrXKrigs74gn0u052GBVmBkKP4IUnGoIEQgXwJ0A-Hifr0f9BpybfeGg-Qze6lHEJZOwab6yvcMumfYGtuDm30vn2Ih50ZjGhqV9qTBro4pR2g_Gs32xv4YUy3R4I4-ARk_ayWG-g.webp' },
+  { name: '안토니', position: 'forward', number: 21, image: 'https://i.namu.wiki/i/tr2fysatYSVEYHmT9ZMh0s-syIDcr1fhGDOfWot4y1C2q56ISqZuhJ46zOEJ0JqjVvE_wrWVwZwEzmRLNBYEtAwtD80o3hwAut7ltGNG_vMqtt48ZO58dv--vZA1xbk2uLazTtmjMX4V-HNDVzTd6w.webp' },
+  { name: '마누엘 우가르테', position: 'midfielder', number: 25, image: 'https://i.namu.wiki/i/8iStlsgapHIi2FZpl7opoxncU8LabkgeuJ794SianJ53xuacItWguk84Fuw6lOgN0ZrLoJ7NvvHVlK7qLGPUbZY-0Z7hBjs5ATUKyuBgPXhENXh9DXCmC3m6lVQ73dTZQAIR5Z_Vq4SsqREvzkJfMg.webp' },
+  { name: '조니 에반스', position: 'defender', number: 35, image: 'https://i.namu.wiki/i/gqHXrcGVLeh86evonqzG7CGBJlySH9qKeoeVjKCt3Vc-49E1FuDvd3eJaJ5pnjl4rGh2MK15F1KI08Savk9FUnfddN2Uw4nVykEtb6kuDhOnP9qJ1tdhTbrAw0xEiTUsPKzCQ_GYkx6OXQ2mBMDnrA.webp' },
+];
+
+export default players;
+
